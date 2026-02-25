@@ -1,3 +1,11 @@
+import sys
+import pandas as pd
+import sklearn
+
+print("Python version:", sys.version)
+print("Pandas version:", pd.__version__)
+print("Sklearn version:", sklearn.__version__)
+
 import streamlit as st
 import numpy as np
 import pandas as pd
@@ -70,3 +78,4 @@ if st.button("🔍 Predict Stress Level"):
     stress_map = {0: "🟢 Low Stress", 1: "🟡 Medium Stress", 2: "🔴 High Stress"}
     st.subheader("Prediction Result")
     st.success(f"Stress Level: **{stress_map[prediction]}**")
+
